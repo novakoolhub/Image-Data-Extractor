@@ -4,7 +4,7 @@ from flask import Flask, request
 import requests
 import json
 
-from PIL import PilImage
+from PIL import Image as PilImage
 from io import BytesIO
 
 
@@ -21,9 +21,9 @@ def clamp(Number, Min, Max):
 
 # App
 
-App = Flask(__name__)
+app = Flask(__name__)
 
-@App.route('/')
+@app.route('/')
 def Post():
     ImageURL = request.args.get("URL")
     ImageSizeX = int(request.args.get("SizeX"))
@@ -39,4 +39,4 @@ def Post():
             "Size": NewImage.size,
         })
 
-App.run()
+app.run()
