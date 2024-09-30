@@ -1,2 +1,2 @@
 # Image-Data-Extractor
-Python Flask API
+A Flask API used to get image pixel data.
